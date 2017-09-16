@@ -1,22 +1,22 @@
 
 class Parser {
     constructor (request) {
-        this.headers = request.headers
+        this.request = request
     }
 
     ip () {
-        return this.headers.host
+        return this.request['x-forwarded-for'] || this.request.ip
     }
 
     os () {
-        const user = this.headers['user-agent']
+        const user = this.request.headers['user-agent']
         const rgx = new RegExp(/(\(.+?\))/)
         const os = rgx.exec(user)[0]
         return os.replace(/[\(\)]/g, '')
     }
 
     language () {
-        return this.headers['accept-language'].split(',')[0]
+        return this.request.headers['accept-language'].split(',')[0]
     }
 
     getHash () {
