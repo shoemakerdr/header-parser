@@ -17,12 +17,18 @@
         <div>
             <h3>Example Usage</h3>
             <code>https://thawing-coast-66449.herokuapp.com/whoami</code>
+            <button id='button' class='button'>Try this API</button>
             <h3>Example Output</h3>
             <code>{ "ipaddress": "192.22.3.171", "language": "en-US", "software": "Macintosh; Intel Mac OS X 10_12_6"}</code>
         </div>
         <footer>
             <p class='footer-text'>Created by <a href='https://github.com/shoemakerdr' target='_blank'>Derek Shoemaker</a></p>
         </footer>
-                                                                                                                                                                                    
+        <script>
+            const button = document.getElementById('button')
+            button.addEventListener('click', () => {
+                window.open('https://thawing-coast-66449.herokuapp.com/whoami', '_blank')
+            })
+        </script>
     </body>
 </html>
