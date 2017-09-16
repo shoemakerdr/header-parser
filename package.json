@@ -1,0 +1,33 @@
+{
+  "name": "header-parser",
+  "version": "1.0.0",
+  "description": "FCC's Request Header Parser Microservice Project",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": "8.1.2"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoemakerdr/header-parser.git"
+  },
+  "keywords": [],
+  "author": "Derek Shoemaker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoemakerdr/header-parser/issues"
+  },
+  "homepage": "https://github.com/shoemakerdr/header-parser#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
