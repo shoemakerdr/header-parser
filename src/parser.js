@@ -5,7 +5,8 @@ class Parser {
     }
 
     ip () {
-        return this.request.headers['x-forwarded-for'] || this.request.ip
+        const rgx = new RegExp(/(::ffff:|::)/g)
+        return this.request.headers['x-forwarded-for'] || this.request.ip.replace(rgx, '')
     }
 
     os () {
