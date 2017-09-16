@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 
 app.get('/whoami', (req, res) => {
     const parse = new Parser(req)
-    console.log(`IP ADDRESS: ${parse.ip()}`)
     res.json(parse.getHash())
 })
 
