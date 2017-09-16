@@ -5,7 +5,7 @@ class Parser {
     }
 
     ip () {
-        return this.request['x-forwarded-for'] || this.request.ip
+        return this.request.headers['x-forwarded-for'] || this.request.ip
     }
 
     os () {
